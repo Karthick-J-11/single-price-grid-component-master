@@ -1,0 +1,189 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    margin: auto;
+    display: grid;
+    width: 375px;
+    height: 870px;
+    background-color: hsl(204, 43%, 93%);
+}
+
+main {
+    width: 310px;
+    height: 724px;
+    display: grid;
+    margin: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-items: center; 
+    box-shadow: 5px 5px 30px hsl(220, 2%, 35%);
+}
+
+.one {
+    width: 310px;
+    height:268px;
+    background: #fff;
+    padding: 25px;
+}
+
+.one h1 {
+    color: hsl(179, 62%, 43%);
+    padding-bottom: 20px;
+    font-weight: 700;
+}
+
+.one h2 {
+    color: hsl(71, 73%, 54%);
+    font-size: 17px;
+    padding-bottom: 25px;
+}
+
+.one p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: hsl(218, 22%, 67%);
+}
+
+.two {
+    width: 310px;
+    height:228px;
+    background: hsl(179, 62%, 43%);
+    padding: 20px;
+}
+
+.two h2 {
+    color:hsl(204, 43%, 93%);
+    font-size: 17px;
+    padding-bottom: 20px;
+}
+
+.two p:first-of-type {
+    color:hsl(204, 43%, 93%);
+    font-size: 25px;
+    padding-bottom: 10px;
+    text-align: left;
+    font-weight: 700;
+}
+
+.two span {
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+.two p:last-of-type {
+    color:hsl(204, 43%, 93%);
+    font-size: 15px;
+}
+
+.two button {
+    width: 266px;
+    height: 50px;
+    border-radius: 5px;
+    background:hsl(71, 73%, 54%);
+    border:hsl(71, 73%, 54%);
+    margin-top: 30px;
+    color:hsl(204, 43%, 93%);
+    font-size: 15px;
+    font-weight: bold;
+    box-shadow: 0 5px 10px hsl(220, 2%, 35%);
+}
+
+.three {
+    width: 310px;
+    height:228px;
+    background: hsl(179, 47.2%, 51.8%);
+    padding: 20px;
+}
+
+.three h2 {
+    color:hsl(204, 43%, 93%);
+    font-size: 17px;
+    padding-bottom: 20px;
+}
+
+.three p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: hsl(204, 43%, 93%);
+    padding-right: 85px;
+}
+
+@media only screen and (min-width: 920px) {
+
+    body {
+        background: hsl(204, 43%, 93%);
+        width: 1440px;
+        height: 800px;
+        display: grid;
+    }
+
+    main {
+        box-sizing: border-box;
+        width: 635px;
+        height: 476px;
+        justify-items: center; 
+        display: grid;
+        grid-template-areas: 
+       "one one"
+       "two three";
+        padding: 0;
+        box-shadow: 0px 2px 20px hsl(220, 2%, 35%);
+        border-radius: 10px;
+    }
+
+    .one {
+        grid-area: one;
+        width: 635px;
+        height: 217px;
+        padding: 40px;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .one h2 {
+        padding-bottom: 10px;
+        font-weight: 700;
+    }
+
+    .one p {
+        padding-right: 65px;
+    }
+    
+
+    .two {
+        grid-area: two;
+        width: 318px;
+        height: 260px;
+        padding: 40px;
+        border-radius: 0 0 0 10px;
+    }
+
+    .two button {
+        width: 237px;
+        height: 48px;
+        box-shadow: 0 5px 10px hsl(220, 2%, 35%);
+    }
+
+    .three {
+        grid-area: three;
+        width: 317px;
+        height: 260px;
+        padding: 40px;
+        border-radius: 0 0 10px 0;
+    }
+
+    .three h2 {
+        padding-bottom: 10px;
+        font-weight: 700;
+    }
+
+    .three p{
+        font-size: 13px;
+        line-height: 1.6;
+        font-weight: lighter;
+    }
+}
